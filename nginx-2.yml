@@ -1,0 +1,18 @@
+---
+- hosts: demoboxes 
+  user: ansible-test 
+  sudo: yes 
+
+  tasks:
+
+  - name: install Nginx 
+    apt: pkg=nginx state=installed   
+    notify:
+     - Start Nginx
+
+  handlers:
+   - name: Start Nginx
+     service: name=nginx state=start
+
+
+   

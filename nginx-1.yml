@@ -1,0 +1,10 @@
+---
+- hosts: demoboxes 
+  user: ansible-test 
+  sudo: yes 
+
+  tasks:
+
+  - name: install Nginx 
+    apt: pkg=nginx state=installed   
+#apt: pkg=nginx state=installed update_cache=true 
