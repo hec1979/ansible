@@ -1,6 +1,6 @@
 ---
-- hosts: demoboxes 
-  user: ansible-test 
+- hosts: hector-nodes 
+  user: root 
   sudo: yes 
 
   tasks:

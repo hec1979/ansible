@@ -1,6 +1,6 @@
 ---
-- hosts: demoboxes 
-  user: ansible-test 
+- hosts: hector-nodes 
+  user: root 
   sudo: yes 
 
   tasks:
@@ -12,7 +12,7 @@
 
   handlers:
    - name: Start Nginx
-     service: name=nginx state=start
+     service: name=nginx state=started
 
 
    

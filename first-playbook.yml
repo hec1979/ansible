@@ -1,7 +1,7 @@
 ---
-- hosts: demoboxes
-  user: ansible-test
-  sudo: yes
+- hosts: hector-nodes 
+  user: root 
+  sudo: no 
   tasks:
   - name: install apache2 
     apt: pkg=apache2 state=latest 

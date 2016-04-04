@@ -1,10 +1,10 @@
 ---
-- hosts: demoboxes 
-  user: ansible-test 
+- hosts: hector-nodes 
+  user: root 
   sudo: yes 
 
   tasks:
 
   - name: install Nginx 
     apt: pkg=nginx state=installed   
-#apt: pkg=nginx state=installed update_cache=true 
+    #apt: pkg=nginx state=installed update_cache=true 
